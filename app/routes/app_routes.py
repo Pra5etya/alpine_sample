@@ -1,21 +1,16 @@
 from flask import Blueprint, render_template, render_template_string
-from flask_limiter import Limiter
-from flask_limiter.util import get_remote_address
-from werkzeug.exceptions import HTTPException
 from .data_routes import project_data
+from .. import limiter  # ambil limiter dari app/__init__.py
 
 # Blueprint
 main_bp = Blueprint('main', __name__)
-
-# Limiter khusus blueprint
-limiter = Limiter(get_remote_address, app=main_bp)
 
 # =====================
 # Routes
 # =====================
 
 @main_bp.route('/')
-@limiter.limit("5 per minute")  # Rate limit 5 request per menit
+@limiter.limit("2 per 20 seconds")  # limit cepat untuk testing
 def home():
     html = """
     <h1>Flask + Alpine.js Demo</h1>
@@ -42,7 +37,6 @@ def cart():
 
 @main_bp.route('/projects')
 def projects():
-    # load data
     data = project_data()
     return render_template('projects.html', projects_param=data)
 
@@ -51,5 +45,4 @@ def projects():
 # =====================
 @main_bp.errorhandler(429)
 def ratelimit_handler(e):
-    # Bisa kembalikan template custom
-    return render_template('429.html', error=e.description), 429
+    return render_template('429.html'), 429
