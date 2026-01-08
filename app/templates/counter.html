@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Counter</h2>
+
+<!-- x-data mendefinisikan state lokal untuk komponen ini -->
+<div x-data="{ count: 0 }">
+    <!-- @click adalah shortcut x-on:click untuk event handling -->
+    <button @click="count--">-</button>
+
+    <!-- x-text menampilkan reactive data count -->
+    <span x-text="count" class="px-2"></span>
+
+    <button @click="count++">+</button>
+</div>
+{% endblock %}

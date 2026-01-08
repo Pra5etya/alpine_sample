@@ -1,0 +1,126 @@
+{
+  "_note": "Gambar berada di folder private melewati file_routes demi kemanan data",
+
+  "project": [
+  {
+    "title": "Customer Churn Prediction",
+    "img": "logo.png",
+    "tech": ["Python", "Scikit-Learn"],
+    "industry": "fintech",
+    "description": "Random Forest classifier untuk prediksi churn...",
+    "actions": [
+      { "label": "View Project", "link": "#" }
+    ]
+  }, 
+
+  {
+    "title": "Retail Sales Dashboard",
+    "img": "logo.png",
+    "tech": ["Tableau", "SQL"],
+    "industry": "ecommerce",
+    "description": "Dashboard interaktif penjualan bulanan...",
+    "actions": [
+      { "label": "View Project", "link": "#" }
+    ]
+  }, 
+
+  {
+    "title": "ETL Pipeline Automation",
+    "img": "logo.png",
+    "tech": ["Airflow", "AWS Redshift"],
+    "industry": "enterprise",
+    "description": "ETL pipeline otomatis untuk data besar...",
+    "actions": [
+      { "label": "View Project", "link": "#" }
+    ]
+  }, 
+
+  {
+    "title": "Sentiment Analysis Tool",
+    "img": "logo.png",
+    "tech": ["NLP", "PyTorch"],
+    "industry": "media",
+    "description": "Tool analisis sentimen menggunakan BERT...",
+    "actions": [
+      { "label": "View Project", "link": "#" }
+    ]
+  }, 
+
+  {
+    "title": "E-commerce Sales Analysis",
+    "img": "logo.png",
+    "tech": ["PostgreSQL", "Analytics"],
+    "industry": "ecommerce",
+    "description": "Analisis SQL 2M+ transaksi untuk retention...",
+    "actions": [
+      { "label": "View Project", "link": "#" }
+    ]
+  }, 
+
+  {
+    "title": "Urban Traffic Heatmap",
+    "img": "logo.png",
+    "tech": ["GeoPandas", "Folium"],
+    "industry": "smartcity",
+    "description": "Visualisasi kemacetan Jakarta menggunakan Python...",
+    "actions": [
+      { "label": "View Project", "link": "#" }
+    ]
+  }, 
+
+  {
+    "title": "IoT Smart Home System",
+    "img": "logo.png",
+    "tech": ["IoT", "Arduino"],
+    "industry": "iot",
+    "description": "Automasi lampu dan temperatur rumah berbasis IoT.",
+    "actions": [
+      { "label": "View Project", "link": "#" }
+    ]
+  }, 
+
+  {
+    "title": "AI-based Resume Screener",
+    "img": "logo.png",
+    "tech": ["Python", "TensorFlow"],
+    "industry": "hrtech",
+    "description": "Menyaring dan memberi ranking CV otomatis menggunakan AI.",
+    "actions": [
+      { "label": "View Project", "link": "#" }
+    ]
+  }, 
+
+  {
+    "title": "Social Media Analytics",
+    "img": "logo.png",
+    "tech": ["Python", "Pandas"],
+    "industry": "marketing",
+    "description": "Analisis engagement media sosial untuk strategi marketing.",
+    "actions": [
+      { "label": "View Project", "link": "#" }
+    ]
+  }, 
+
+  {
+    "title": "Weather Forecast Dashboard",
+    "img": "logo.png",
+    "tech": ["JavaScript", "API"],
+    "industry": "weather",
+    "description": "Dashboard cuaca real-time dengan API openweathermap.",
+    "actions": [
+      { "label": "View Project", "link": "#" }
+    ]
+  }, 
+  
+  {
+    "title": "Sales Prediction Model",
+    "img": "logo.png",
+    "tech": ["Python", "Scikit-Learn"],
+    "industry": "ecommerce",
+    "description": "Model prediksi penjualan menggunakan regresi linear.",
+    "actions": [
+      { "label": "View Project", "link": "#" }
+    ]
+  }
+]
+}

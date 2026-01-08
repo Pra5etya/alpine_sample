@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title if title else "Alpine.js + Flask" }}</title>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+        body { font-family: sans-serif; padding: 2rem; }
+        input { padding: 0.3rem; margin-right: 0.3rem; }
+        button { padding: 0.3rem 0.6rem; }
+    </style>
+</head>
+<body>
+    <a href="/">🏠 Home</a>
+    <hr>
+    {% block content %}{% endblock %}
+</body>
+</html>

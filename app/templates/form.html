@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Greeting Form</h2>
+
+<!-- x-data = state lokal; name untuk input, showGreeting untuk kondisi tampil -->
+<div x-data="{ name: '', showGreeting: false }">
+    
+    <!-- x-model = two-way binding, input terhubung langsung ke name -->
+    <input type="text" x-model="name" placeholder="Enter your name">
+    
+    <!-- @click = event untuk ubah state showGreeting -->
+    <button @click="showGreeting = true">Greet Me</button>
+
+    <!-- x-show = tampilkan div hanya jika showGreeting true -->
+    <!-- x-transition = animasi saat muncul/hilang -->
+    <div x-show="showGreeting" x-transition class="mt-2">
+        Hello, <span x-text="name"></span>!
+    </div>
+</div>
+{% endblock %}

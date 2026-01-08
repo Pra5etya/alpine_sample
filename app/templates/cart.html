@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Shopping Cart</h2>
+
+<!-- Alpine store = global reactive state -->
+<script>
+document.addEventListener('alpine:init', () => {
+    console.log("Alpine store 'cart' sedang diinisialisasi"); // log saat init
+
+    Alpine.store('cart', {
+        items: [],  // array item cart
+
+        add(item) {  // method tambah item
+            if(item.trim() !== '') {
+                this.items.push(item);
+                console.log(`Item ditambahkan: ${item}`);
+                console.log('Isi cart sekarang:', this.items);
+            } else {
+                console.warn('Tidak bisa menambahkan item kosong');
+            }
+        },
+
+        remove(index) {  // method hapus item berdasarkan index
+            const removed = this.items[index];
+            this.items.splice(index, 1);
+            console.log(`Item dihapus: ${removed}`);
+            console.log('Isi cart sekarang:', this.items);
+        }
+    });
+});
+</script>
+
+
+<!-- x-data = local state untuk input baru -->
+<div x-data="{ newItem: '' }">
+
+    <!-- x-model = bind input ke variable newItem -->
+    <input type="text" x-model="newItem" placeholder="Item name">
+    
+    <!-- @click = panggil method add dari store, reset input -->
+    <button @click="$store.cart.add(newItem); newItem=''">Add to Cart</button>
+
+    <!-- reactive display jumlah item -->
+    <p>Total Items: <span x-text="$store.cart.items.length"></span></p>
+
+    <ul>
+        <!-- x-for looping item array dari global store -->
+        <template x-for="(item, index) in $store.cart.items" :key="index">
+            <li>
+                <!-- x-text untuk menampilkan nama item -->
+                <span x-text="item"></span>
+                
+                <!-- @click = panggil method remove dari store -->
+                <button @click="$store.cart.remove(index)">Remove</button>
+            </li>
+        </template>
+    </ul>
+</div>
+{% endblock %}
